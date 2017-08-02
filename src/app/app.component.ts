@@ -13,6 +13,12 @@ import { Component } from '@angular/core';
 <br/>
 <br/>
  <employeelist></employeelist>
+<br/>
+<br/>
+ <input type='text' [(ngModel)]='userText'/>
+<br/>
+ <br/>
+ <simple [content] = 'userText' ></simple>
 `
 })
 export class AppComponent  {
@@ -24,5 +30,8 @@ export class AppComponent  {
     getFullname(): string {
         return this.FirstName + ' ' + this.LastName;
     }
+    userText: string = 'yinqianhao';
+
+
     
 }
